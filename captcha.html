@@ -11,8 +11,6 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.js"
         integrity="sha384-GCPlQtWhtsjcfJYVuUlFZnpQgvoZ26GD/vvA4kG1PBaGBbtpq2cdvZjgj/mAMEY4" crossorigin="anonymous">
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <style>
         body {
             max-width: 800px;
@@ -50,11 +48,11 @@
     <script>
         let id = 0;
         let mydata = JSON.parse(data);
-        $num = Math.floor(Math.random() * (4 - 1)) + 1;
+        $num = Math.floor(Math.random() * (7 - 1)) + 1;
 
         function myFunction() {
-    
-            num = Math.floor(Math.random() * (4 - 1)) + 1;
+
+            num = Math.floor(Math.random() * (7 - 1)) + 1;
 
             let dd = mydata[num].latex;
 

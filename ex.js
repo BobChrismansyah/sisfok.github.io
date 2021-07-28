@@ -19,6 +19,21 @@ data = '\
                 "correct_answer": "e",\
                 "msg": "Evaluate the following expression!",\
                 "latex": "\\\\lim_{n\\\\to\\\\infty} {(1+\\\\frac{1}{n})}^{n}"\
-            }\
+            },\
+            "5": {\
+                "correct_answer": "-1",\
+                "msg": "Show the answer",\
+                "latex": "\\\\lim_{x \\\\to 1} {\\\\frac{\\\\frac{1}{x}-1}{x-1}}"\
+            },\
+            "6": {\
+                "correct_answer": "-1",\
+                "msg": "Show the answer",\
+                "latex": "\\\\lim_{x \\\\to 0} {(x^2-1)(2 - \\\\cos{x})}",\
+            },\
+            "7": {\
+                "correct_answer": "24",\
+                "msg": "Goodluck",\
+                "latex": "\\\\int_{1}^{2} \\\\int_{0}^{4} 2xy\\\\,dy\\\\,dx ",\
+            },\
         }\
 ';
