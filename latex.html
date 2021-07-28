@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.css"
+        integrity="sha384-SkMvsJ0Np/CalM0X1hZCccQs6tnLq178/sGoPANiauambU0V/bloCaG3wOXfv+Ef" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.js"
+        integrity="sha384-GCPlQtWhtsjcfJYVuUlFZnpQgvoZ26GD/vvA4kG1PBaGBbtpq2cdvZjgj/mAMEY4" crossorigin="anonymous">
+    </script>
+    <style>
+        body {
+            max-width: 800px;
+            margin: auto;
+            padding-top: 10px;
+        }
+
+        nav {
+            text-align: right;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Latex SISFOK</h1>
+    <textarea name="tex" id="tex" cols="100" rows="10">\displaystyle {1 +  \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots }= \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \quad\quad \text{for }\lvert q\rvert<1.</textarea>
+    <br>
+    <button onclick="myFunction()">Ok</button>
+    <br>
+    <span id="kat"></span>
+    <script>
+        function myFunction(){
+            $date = document.getElementById("tex").value;
+            katex.render($date, document.getElementById("kat"));
+        }
+    </script> 
+</body>
+</html>
