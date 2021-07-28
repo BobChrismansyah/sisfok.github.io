@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.css"
+        integrity="sha384-SkMvsJ0Np/CalM0X1hZCccQs6tnLq178/sGoPANiauambU0V/bloCaG3wOXfv+Ef" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.js"
+        integrity="sha384-GCPlQtWhtsjcfJYVuUlFZnpQgvoZ26GD/vvA4kG1PBaGBbtpq2cdvZjgj/mAMEY4" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            max-width: 800px;
+            margin: auto;
+            padding-top: 10px;
+        }
+
+        nav {
+            text-align: right;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body onload="myFunction();">
+    <button onclick="myFunction()">Try again</button>
+    <br>
+    <p id="msg"></p>
+    <span id="kat"></span>
+    <br>
+    <br>
+    <label for="answer">Input answer</label>
+    <input type="number" name="answer" id="answer">
+    <button onclick="result();">Send</button>
+    <p id="yey"></p>
+
+    <script type="text/javascript" src="ex.js"></script>
+    <script>
+        let id = 0;
+        let mydata = JSON.parse(data);
+        $num = Math.floor(Math.random() * (4 - 1)) + 1;
+
+        function myFunction() {
+    
+            num = Math.floor(Math.random() * (4 - 1)) + 1;
+
+            let dd = mydata[num].latex;
+
+            $date = dd;
+
+            $date1 = $date.replaceAll("\\\\", "\\");
+            $date1 = $date1.replaceAll("\\\\\\", "\\");
+            $date1 = $date1.replaceAll("\\\\\\\\\\", "\\");
+            $date2 = $date1.replaceAll("\\text{Calculate }", "");
+            $date3 = $date2.replaceAll("&", "");
+            $date3 = $date3.replace("\\n", "");
+            id = num;
+            document.getElementById("msg").innerHTML = mydata[num].msg;
+            katex.render($date3, document.getElementById("kat"));
+        }
+
+        function result() {
+            let dd = mydata[id].correct_answer;
+            if (dd === document.getElementById("answer").value) {
+                document.getElementById("yey").innerHTML = "True";
+            } else {
+                document.getElementById("yey").innerHTML = "false";
+            }
+        }
+    </script>
+</body>
+
+</html>
