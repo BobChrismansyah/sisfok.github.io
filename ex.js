@@ -28,12 +28,12 @@ data = '\
             "6": {\
                 "correct_answer": "-1",\
                 "msg": "Show the answer",\
-                "latex": "\\\\lim_{x \\\\to 0} {(x^2-1)(2 - \\\\cos{x})}",\
+                "latex": "\\\\lim_{x \\\\to 0} {(x^2-1)(2 - \\\\cos{x})}"\
             },\
             "7": {\
                 "correct_answer": "24",\
                 "msg": "Goodluck",\
-                "latex": "\\\\int_{1}^{2} \\\\int_{0}^{4} 2xy\\\\,dy\\\\,dx ",\
-            },\
+                "latex": "\\\\int_{1}^{2} \\\\int_{0}^{4} 2xy\\\\,dy\\\\,dx"\
+            }\
         }\
 ';
