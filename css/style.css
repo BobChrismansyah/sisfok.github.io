@@ -1,0 +1,12 @@
+body {
+    max-width: 800px;
+    margin: auto;
+}
+
+nav {
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+}
